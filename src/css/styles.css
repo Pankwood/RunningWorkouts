@@ -1,0 +1,167 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap');
+
+:root {
+    --accent: #6ec1e4;
+    --header-bg: #fff;
+    --card-bg: #f7f9fa;
+    --border: #e3e6e8;
+    --text-main: #222;
+    --text-secondary: #444;
+}
+
+body {
+    font-family: 'Montserrat', Arial, sans-serif;
+    background: #fff;
+    color: var(--text-main);
+    margin: 0;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+header {
+    background: var(--header-bg);
+    color: var(--accent);
+    padding: 2.5rem 1rem 1.2rem 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--border);
+    border-bottom-left-radius: 2rem;
+    border-bottom-right-radius: 2rem;
+}
+
+header h1 {
+    font-size: 2.7rem;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+    letter-spacing: 2px;
+    color: var(--accent);
+}
+
+header p {
+    color: var(--text-secondary);
+    font-size: 1.2rem;
+    margin: 0;
+}
+
+main {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 2.5rem;
+    padding: 3rem 2rem 2rem 2rem;
+    max-width: 1100px;
+    margin: 0 auto;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.exercise {
+    background: var(--card-bg);
+    border-radius: 1.5rem;
+    box-shadow: 0 2px 12px rgba(110,193,228,0.07);
+    border: 1px solid var(--border);
+    padding: 2rem 1.5rem 1.5rem 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transition: box-shadow 0.18s, border 0.18s;
+}
+
+.exercise:hover {
+    box-shadow: 0 8px 32px rgba(110,193,228,0.13);
+    border: 1.5px solid var(--accent);
+}
+
+.exercise h2 {
+    color: var(--accent);
+    font-size: 1.4rem;
+    margin-bottom: 1.2rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.exercise img {
+    width: 100%;
+    max-width: 260px;
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    border-radius: 1.2rem;
+    margin-bottom: 1.2rem;
+    box-shadow: 0 2px 8px rgba(110,193,228,0.10);
+    background: #fff;
+    padding: 0.4rem;
+    border: 2px solid var(--border);
+}
+
+.exercise p {
+    font-size: 1.08rem;
+    color: var(--text-secondary);
+    line-height: 1.7;
+    text-align: left;
+}
+
+footer {
+    text-align: center;
+    padding: 1.2rem 0;
+    background: var(--header-bg);
+    color: var(--accent);
+    font-size: 1rem;
+    letter-spacing: 1px;
+    margin-top: 2rem;
+    border-top-left-radius: 2rem;
+    border-top-right-radius: 2rem;
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 900px) {
+    main {
+        padding: 2rem 0.5rem 1.5rem 0.5rem;
+        gap: 1.5rem;
+    }
+    header h1 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 600px) {
+    header {
+        padding: 1.2rem 0.5rem 0.7rem 0.5rem;
+        border-bottom-left-radius: 1.2rem;
+        border-bottom-right-radius: 1.2rem;
+    }
+    header h1 {
+        font-size: 1.3rem;
+    }
+    header p {
+        font-size: 1rem;
+    }
+    main {
+        grid-template-columns: 1fr;
+        padding: 1rem 0.1rem 1rem 0.1rem;
+        gap: 1rem;
+    }
+    .exercise {
+        padding: 1rem 0.5rem;
+        border-radius: 1rem;
+    }
+    .exercise h2 {
+        font-size: 1.08rem;
+    }
+    .exercise img {
+        max-width: 95vw;
+        padding: 0.2rem;
+    }
+    .exercise p {
+        font-size: 0.98rem;
+    }
+    footer {
+        font-size: 0.9rem;
+        border-top-left-radius: 1rem;
+        border-top-right-radius: 1rem;
+        padding: 0.8rem 0;
+        position: fixed;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin-top: 0;
+    }
+}
