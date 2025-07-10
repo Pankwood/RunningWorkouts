@@ -40,31 +40,83 @@
             text-align: center;
         }
 
-        .start-btn {
-            background: var(--accent);
-            color: #fff;
-            border: none;
-            border-radius: 2rem;
-            padding: 1rem 2.5rem;
-            font-size: 1.2rem;
-            font-weight: 700;
-            cursor: pointer;
-            box-shadow: 0 2px 8px rgba(110, 193, 228, 0.10);
-            transition: background 0.2s;
-            text-decoration: none;
-            display: inline-block;
-            margin-bottom: 15px;
+        .card-container {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 2.5rem;
         }
 
-        .start-btn:hover,
-        .start-btn:focus {
-            background: var(--accent-hover);
+        .exercise-card {
+            background: var(--card-bg, #f7f9fa);
+            border: 1px solid var(--border, #e3e6e8);
+            border-radius: 1.5rem;
+            box-shadow: 0 2px 12px rgba(110, 193, 228, 0.07);
+            width: 270px;
+            padding: 1.5rem 1rem 1.2rem 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            transition: box-shadow 0.18s, border 0.18s, transform 0.18s;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .exercise-card:hover,
+        .exercise-card:focus {
+            box-shadow: 0 8px 32px rgba(110, 193, 228, 0.13);
+            border: 1.5px solid var(--accent, #6ec1e4);
+            transform: translateY(-4px) scale(1.03);
+            color: var(--text-main);
+        }
+
+        .exercise-card img {
+            width: 90px;
+            height: 90px;
+            object-fit: cover;
+            border-radius: 1rem;
+            margin-bottom: 1rem;
+            background: #fff;
+            border: 2px solid var(--border, #e3e6e8);
+        }
+
+        .exercise-card-title {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent, #6ec1e4);
+            margin-bottom: 0.5rem;
+        }
+
+        .exercise-card-desc {
+            font-size: 1rem;
+            color: var(--text-secondary, #444);
         }
 
         footer {
             position: fixed;
             width: 100%;
             bottom: 0;
+            background: var(--header-bg, #fff);
+            color: var(--accent, #6ec1e4);
+            font-size: 1rem;
+            letter-spacing: 1px;
+            border-top: 1px solid var(--border, #e3e6e8);
+            padding: 1.2rem 0;
+        }
+
+        @media (max-width: 700px) {
+            .card-container {
+                flex-direction: column;
+                align-items: center;
+                gap: 1.5rem;
+            }
+
+            .exercise-card {
+                width: 90vw;
+                max-width: 340px;
+            }
         }
     </style>
 </head>
@@ -76,17 +128,29 @@
             <div class="welcome-subtitle">Your personal guide to a stronger, healthier core</div>
             <div class="welcome-description">
                 Staying consistent with your workouts is the key to progress. <br>
-                This website helps you remember your favorite core exercises and how to perform them with proper
-                form.<br><br>
+                This website helps you remember your favorite core and mobility exercises and how to perform them with
+                proper form.<br><br>
                 Whether you're at home, at the gym, or on the go, let us guide you through effective movements to build
-                stability, strength, and confidence.<br>
-                <p>
-                    <strong>Ready to get started?</strong>
-                </p>
+                stability, strength, and confidence.
             </div>
-            <a href="core.html" class="start-btn">View Core Exercises</a>
-            <a href="mobility.html" class="start-btn">View Mobility Exercises</a>
-
+            <div class="card-container">
+                <a href="core.html" class="exercise-card">
+                    <img src="images/core/1-Knee-to-Elbow-Plank.gif" alt="Core Exercises">
+                    <div class="exercise-card-title">Core Exercises</div>
+                    <div class="exercise-card-desc">
+                        Discover a collection of essential core exercises to strengthen your abs, back, and improve
+                        stability.
+                    </div>
+                </a>
+                <a href="mobility.html" class="exercise-card">
+                    <img src="images/mobility/1.gif" alt="Mobility Exercises">
+                    <div class="exercise-card-title">Mobility Exercises</div>
+                    <div class="exercise-card-desc">
+                        Explore mobility routines designed to increase your flexibility, range of motion, and prevent
+                        injuries.
+                    </div>
+                </a>
+            </div>
         </div>
     </div>
     <footer>
