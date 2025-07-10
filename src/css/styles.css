@@ -2,17 +2,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;400&display=swap');
 
 :root {
-    --accent: #6ec1e4;
-    --header-bg: #fff;
-    --card-bg: #f7f9fa;
-    --border: #e3e6e8;
-    --text-main: #222;
-    --text-secondary: #444;
+    --background: #121212;
+    --accent: #4e9af1;
+    --header-bg: #1f1f1f;
+    --card-bg: #1e1e1e;
+    --border: #4e9af1;
+    --text-main: #f1f1f1;
+    --text-secondary: #b3b3b3;
 }
 
 body {
     font-family: 'Montserrat', Arial, sans-serif;
-    background: #fff;
+    background: var(--background);
     color: var(--text-main);
     margin: 0;
     min-height: 100vh;
@@ -57,7 +58,7 @@ main {
 .exercise {
     background: var(--card-bg);
     border-radius: 1.5rem;
-    box-shadow: 0 2px 12px rgba(110,193,228,0.07);
+    box-shadow: 0 2px 12px rgba(110, 193, 228, 0.07);
     border: 1px solid var(--border);
     padding: 2rem 1.5rem 1.5rem 1.5rem;
     display: flex;
@@ -67,7 +68,7 @@ main {
 }
 
 .exercise:hover {
-    box-shadow: 0 8px 32px rgba(110,193,228,0.13);
+    box-shadow: 0 8px 32px rgba(110, 193, 228, 0.13);
     border: 1.5px solid var(--accent);
 }
 
@@ -86,7 +87,7 @@ main {
     object-fit: cover;
     border-radius: 1.2rem;
     margin-bottom: 1.2rem;
-    box-shadow: 0 2px 8px rgba(110,193,228,0.10);
+    box-shadow: 0 2px 8px rgba(110, 193, 228, 0.10);
     background: #fff;
     padding: 0.4rem;
     border: 2px solid var(--border);
@@ -117,6 +118,7 @@ footer {
         padding: 2rem 0.5rem 1.5rem 0.5rem;
         gap: 1.5rem;
     }
+
     header h1 {
         font-size: 2rem;
     }
@@ -128,31 +130,39 @@ footer {
         border-bottom-left-radius: 1.2rem;
         border-bottom-right-radius: 1.2rem;
     }
+
     header h1 {
         font-size: 1.3rem;
     }
+
     header p {
         font-size: 1rem;
     }
+
     main {
         grid-template-columns: 1fr;
         padding: 1rem 0.1rem 1rem 0.1rem;
         gap: 1rem;
     }
+
     .exercise {
         padding: 1rem 0.5rem;
         border-radius: 1rem;
     }
+
     .exercise h2 {
         font-size: 1.08rem;
     }
+
     .exercise img {
         max-width: 95vw;
         padding: 0.2rem;
     }
+
     .exercise p {
         font-size: 0.98rem;
     }
+
     footer {
         font-size: 0.9rem;
         border-top-left-radius: 1rem;
