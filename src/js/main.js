@@ -2,7 +2,7 @@
 // It handles interactivity, event listeners, and any dynamic behavior required on the webpage.
 
 document.addEventListener('DOMContentLoaded', () => {
-    const sections = Array.from(document.querySelectorAll("main > section.exercise"));
+    //const sections = Array.from(document.querySelectorAll("main > section.exercise"));
 
     /*sections.forEach((section, idx) => {
         // For desktop click
