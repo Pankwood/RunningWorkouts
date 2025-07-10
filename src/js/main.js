@@ -4,7 +4,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     const sections = Array.from(document.querySelectorAll("main > section.exercise"));
 
-    sections.forEach((section, idx) => {
+    /*sections.forEach((section, idx) => {
         // For desktop click
         section.addEventListener("click", function () {
             const nextSection = sections[(idx + 1) % sections.length];
@@ -25,5 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
             // else: do nothing, allow default scroll/behavior
         });
-    });
+    });*/
 });
