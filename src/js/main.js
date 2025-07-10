@@ -2,13 +2,17 @@
 // It handles interactivity, event listeners, and any dynamic behavior required on the webpage.
 
 document.addEventListener('DOMContentLoaded', () => {
-    console.log('Document is ready!');
 
-    // Example of adding an event listener to a button
-    const button = document.getElementById('myButton');
-    if (button) {
-        button.addEventListener('click', () => {
-            alert('Button was clicked!');
+    const sections = Array.from(document.querySelectorAll("main > section.exercise"));
+
+    sections.forEach((section, idx) => {
+        section.addEventListener("click", function () {
+            const nextSection = sections[(idx + 1) % sections.length];
+            nextSection.scrollIntoView({ behavior: "smooth", block: "start" });
         });
-    }
+        section.addEventListener("touchend", function () {
+            const nextSection = sections[(idx + 1) % sections.length];
+            nextSection.scrollIntoView({ behavior: "smooth", block: "start" });
+        });
+    });
 });
