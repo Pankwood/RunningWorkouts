@@ -17,7 +17,8 @@
         <section class="exercise">
             <h2>#1: Runner's Stretch</h2>
             <img src="images/mobility-img/1.gif" alt="Runner's Stretch">
-            <div class="text">
+            <button class="toggle-button" onclick="toggleText(this)">Show more</button>
+            <div class="text collapsed">
                 <p class="description">
                     This first mobility exercise is my favorite because it hits all the specific areas we want to target
                     in just one move. So, if you have minimal time and need to choose just a couple of exercises to do,
@@ -41,7 +42,8 @@
         <section class="exercise">
             <h2>#2: Goblet Squat</h2>
             <img src="images/mobility-img/2.gif" alt="Goblet Squat">
-            <div class="text">
+            <button class="toggle-button" onclick="toggleText(this)">Show more</button>
+            <div class="text collapsed">
                 <p class="description">
                     The goblet squat is often used to build strength while holding a heavy kettlebell in between your
                     hands.
@@ -61,7 +63,8 @@
         <section class="exercise">
             <h2>#3: Walking Lunges With Overhead Reach</h2>
             <img src="images/mobility-img/3.gif" alt="Walking Lunges With Overhead Reach">
-            <div class="text">
+            <button class="toggle-button" onclick="toggleText(this)">Show more</button>
+            <div class="text collapsed">
                 <p class="description">
                     Walking lunges not only improve your range of motion but also work your stability and coordination.
                     The overhead reach works your shoulder mobility.
@@ -83,7 +86,8 @@
         <section class="exercise">
             <h2>#4: Quad Hip Flexor Stretch</h2>
             <img src="images/mobility-img/4.gif" alt="Quad Hip Flexor Stretch">
-            <div class="text">
+            <button class="toggle-button" onclick="toggleText(this)">Show more</button>
+            <div class="text collapsed">
                 <p class="description">
                     This is a two-for-one as we work our hip flexor mobility and throw in a nice quad stretch.
                 </p>
@@ -105,7 +109,8 @@
         <section class="exercise">
             <h2>#5: Adductor Mobility</h2>
             <img src="images/mobility-img/5.gif" alt="Adductor Mobility">
-            <div class="text">
+            <button class="toggle-button" onclick="toggleText(this)">Show more</button>
+            <div class="text collapsed">
                 <ul class="instructions">
                     <li>Begin on all fours with your shoulders over your wrists and knees under your hips.</li>
                     <li>Extend your right leg out to the side, placing your foot flat on the floor.</li>
@@ -123,7 +128,8 @@
         <section class="exercise">
             <h2>#6: Ankle Mobility</h2>
             <img src="images/mobility-img/6.gif" alt="Ankle Mobility">
-            <div class="text">
+            <button class="toggle-button" onclick="toggleText(this)">Show more</button>
+            <div class="text collapsed">
                 <p class="description">
                     We runners, especially heel strikers, tend to have very stiff ankles. Loosening up the ankles before
                     running can help improve mobility in your running stance phases and take tension off the shins. In
@@ -143,7 +149,8 @@
         <section class="exercise">
             <h2>#7: Full Plank Ankle Pump</h2>
             <img src="images/mobility-img/7.gif" alt="Full Plank Ankle Pump">
-            <div class="text">
+            <button class="toggle-button" onclick="toggleText(this)">Show more</button>
+            <div class="text collapsed">
                 <p class="description">
                     Continuing with ankle work, this mobility exercise will help improve the range of motion in your
                     ankles while promoting good posture and engaging your core.
@@ -161,7 +168,8 @@
         <section class="exercise">
             <h2>#8: Downward Dog Walk Outs</h2>
             <img src="images/mobility-img/8.gif" alt="Downward Dog Walk Outs">
-            <div class="text">
+            <button class="toggle-button" onclick="toggleText(this)">Show more</button>
+            <div class="text collapsed">
                 <p class="description">
                     This yoga-inspired mobility exercise is great for ankle and spine mobility while stretching your
                     calves and hamstrings.
@@ -183,7 +191,8 @@
         <section class="exercise">
             <h2>#9: Squat to Stand</h2>
             <img src="images/mobility-img/9.gif" alt="Squat to Stand">
-            <div class="text">
+            <button class="toggle-button" onclick="toggleText(this)">Show more</button>
+            <div class="text collapsed">
                 <p class="description">
                     If you think you felt your hamstrings in the last mobility exercise, check this one out!
                 </p>
@@ -201,7 +210,8 @@
         <section class="exercise">
             <h2>#10: Hip Rotation</h2>
             <img src="images/mobility-img/10.gif" alt="Hip Rotation">
-            <div class="text">
+            <button class="toggle-button" onclick="toggleText(this)">Show more</button>
+            <div class="text collapsed">
                 <p class="description">
                     Now for some lower spine rotation. I love this one as I feel like my back adjusts into place with
                     some cracks and pops every time I do it!
@@ -225,5 +235,17 @@
     </footer>
     <script src="js/main.js"></script>
 </body>
+<script>
+    function toggleText(button) {
+        const textDiv = button.nextElementSibling;
+        const isCollapsed = textDiv.classList.toggle('collapsed');
+
+        if (isCollapsed) {
+            button.textContent = 'Show more';
+        } else {
+            button.textContent = 'Show less';
+        }
+    }
+</script>
 
 </html>

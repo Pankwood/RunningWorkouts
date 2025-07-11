@@ -116,6 +116,26 @@ main {
     padding: 0 30px;
     background-color: #232020;
     border-radius: 1.2rem;
+    overflow: hidden;
+    transition: max-height 0.4s ease;
+}
+
+.text.collapsed {
+    max-height: 0;
+    padding: 0;
+    margin: 0;
+    opacity: 0;
+    pointer-events: none;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+}
+
+.toggle-button {
+    background-color: transparent;
+    border: none;
+    color: #2a7ae4;
+    cursor: pointer;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
 }
 
 .exercise .description {
