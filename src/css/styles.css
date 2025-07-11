@@ -28,6 +28,18 @@ header {
     border-bottom: 1px solid var(--border);
     border-bottom-left-radius: 2rem;
     border-bottom-right-radius: 2rem;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+}
+
+header>img {
+    margin-right: 15px;
 }
 
 header h1 {
@@ -36,6 +48,7 @@ header h1 {
     margin: 0 0 0.5rem 0;
     letter-spacing: 2px;
     color: var(--accent);
+    align-content: center;
 }
 
 header p {
