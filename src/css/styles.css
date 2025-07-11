@@ -3,10 +3,10 @@
 
 :root {
     --background: #121212;
-    --accent: #4e9af1;
+    --accent: #0099ff;
     --header-bg: #1f1f1f;
     --card-bg: #1e1e1e;
-    --border: #4e9af1;
+    --border: #00ccff;
     --text-main: #f1f1f1;
     --text-secondary: #b3b3b3;
 }
@@ -42,12 +42,17 @@ header>img {
     margin-right: 15px;
 }
 
+h1 {
+    background-image: linear-gradient(var(--accent), var(--border));
+    color: transparent;
+    background-clip: text;
+}
+
 header h1 {
     font-size: 2.7rem;
     font-weight: 700;
     margin: 0 0 0.5rem 0;
     letter-spacing: 2px;
-    color: var(--accent);
     align-content: center;
 }
 
